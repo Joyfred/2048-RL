@@ -32,7 +32,6 @@ createPlotDefinition = () => {
                 text: 'Score vs Move Count',
                 fontSize: 15
             },
-            events: ['click', 'mousemove'],
             tooltips: {
                 callbacks: {
                     label: function(tooltipItems, data) {
