@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048 - RL</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link href="style/rl.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+  <div class="heading">
+    <h1 class="title">2048 - RL</h1>
+  </div>
+  
+  <div class="game-intro">
+    <p>Join numbers and achieve a <strong>2048</strong> tile</p>
+    <p>Or observe the <strong> RL agents</strong> solving!</p>
+  </div>
+
+  <br>
+  <br>
+  
+  <div class="container">
+   
+    
+    <div class="left-container">
+      <div class='choice-controls-container'>
+        <p><strong>Agent Choice & Controls:</strong></p>
+        <div class='choice-container'>
+          <label><input type="radio" value="greedy" name="algorithm" >Greedy</label>
+          <label><input type="radio" value="UCB1" name="algorithm" >UCB1</label>
+          <label><input type="radio" value="MCTS" name="algorithm" checked>Monte Carlo Tree Search</label>
+        </div>
+        <br>
+        <div class='controls-container'>
+          <div id='run-button-container'>
+            <input id="run-count" type="text" value="400">
+            <span> episodes/action</span>
+            <button id='run-button' class='rl-button'>Auto-Run</button>
+          </div>
+          <div class='animation-button-container'>
+            <span> Animation Speed:    </span>
+            <input id="animation-speed-slider" type="range" min="0" max="150" value="0">
+          </div>
+        </div>
+      </div>
+
+      <div class="game-score-container">
+        <div class="score-container">0</div>
+        <div class="game-container">
+          <div class="game-message">
+            <p></p>
+            <div class="lower">
+              <a id="retry-button" class="retry-button">Try again</a>
+              <div class="score-sharing"></div>
+            </div>
+          </div>
+
+          <div class="grid-container">
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+          </div>
+
+          <div class="tile-container">
+        </div>
+
+        </div>  
+      </div>
+    </div>
+
+    <div class='right-container'>
+
+      <!-- <div class='chart-controller'>
+        <p>Do you want score tracking enabled?</p>
+        <label><input type="radio" value="yes" name="graph-enabled"checked>Yes</label>
+        <label><input type="radio" value="no" name="graph-enabled">No</label>
+      </div> -->
+        
+      <div class="chart-container">
+        <canvas id="chart-container" width="630px" height= "550px"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src='js/constants.js'></script>
+  <script src="js/utils.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/hammer.min.js"></script>
+  <script src="js/keyboardInputManager.js"></script>
+  <script src="js/htmlActuator.js"></script>
+  <script src="js/gameGrid.js"></script>
+  <script src="js/gridTile.js"></script>
+  <script src="js/rl.js"></script>
+  <script src="js/gameManager.js"></script>
+  <script src="js/application.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+</body>
+</html>

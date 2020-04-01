@@ -1,0 +1,37 @@
+.controls {
+  margin: 20px 0 0 0;
+  overflow: auto;
+}
+
+.rl-button {
+  margin: 5px 5px 5px 5px ;
+  padding: 5px 5px 5px 5px ;
+  font-size: medium;
+  width: 120px;
+  background: #000000;
+  color: #ffffff;
+  outline: none;
+}
+
+.animation-button-container {
+  display: flex;
+  margin-top: 5px;
+}
+
+.animation-button-container > span{
+  padding-right: 10px;
+}
+
+#runs-container {
+	float: left;
+
+}
+#run-count {
+	width: 50px;
+}
+#run-button-container {
+  float: left;
+}
+
+
+
