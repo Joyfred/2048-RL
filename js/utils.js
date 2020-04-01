@@ -12,7 +12,6 @@ getInitialPlotData = lineId => {
     return {
         data: Array.from([0]),
         borderColor: lineColors[lineId % colorsAvailable],
-        pointRadius: 2,
         label: `Trial ${lineId}`,
         // pointStyle: 'dash',
         fill: false
