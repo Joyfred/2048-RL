@@ -21,8 +21,9 @@ At any instance, there are only four possible actions namely UP, RIGHT, DOWN and
 
 **Reward function**
 Rewards are formulated in two different ways.
-Game Score: Score is the sum of values of merged tiles for that particular action.
-Bespoke Score: Sum of binary logarithm of merged value.
+
+1. Game Score: Score is the sum of values of merged tiles for a particular action.
+2. Bespoke Score: Sum of binary logarithm of merged values for a particular action.
 
 **Goal:**
 Develop an RL agent to solve 2048 without any human or prior knowledge, except knowing the rules of the game.
