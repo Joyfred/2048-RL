@@ -14,7 +14,7 @@ We consider the following methods as the  effective strategies for solving 2048:
 **Problem Formulation:**
 
 **State Space:**
-Theoretically, the maximum tile possible is 131072(217). We reduced this upper bound to 32768(215) for aesthetic computations. Consequently, there are 16 different possibilities for a cell {empty, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384,  32768}. There are 16 cells in a standard board which leads to 1616 ≅ 1020 possible states.
+Theoretically, the maximum tile possible is 131072(2<sup>17</sup>). We reduced this upper bound to 32768(2<sup>15</sup>) for aesthetic computations. Consequently, there are 16 different possibilities for a cell {empty, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384,  32768}. There are 16 cells in a standard board which leads to 16<sup>16</sup> ≅ 10<sup>20</sup> possible states.
 
 **Action Space:**
 At any instance, there are only four possible actions namely UP, RIGHT, DOWN and LEFT.
