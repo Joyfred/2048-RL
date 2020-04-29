@@ -60,7 +60,26 @@ class Grid {
         8192  : '1101',
         16384 : '1110',
         32768 : '1111'
-    }; 
+    };
+
+    static reward = {
+        0     : 0,
+        2     : 1,
+        4     : 2,
+        8     : 3,
+        16    : 4,
+        32    : 5,
+        64    : 6,
+        128   : 7,
+        256   : 8,
+        512   : 9,
+        1024  : 10,
+        2048  : 11,
+        4096  : 12,
+        8192  : 13,
+        16384 : 14,
+        32768 : 15
+    };
 
     constructor(size) {
         this.size = size;
@@ -331,6 +350,7 @@ class Grid {
         let traversals = this.buildTraversals(directionVector);
         let moved = false;
         let score = 0;
+        let reward = 0;
         let won = false;
 
         this.prepareTilesForTransition();
@@ -360,6 +380,7 @@ class Grid {
                         tile.updatePosition(positions.next);
 
                         score += merged.value;
+                        reward += Grid.reward[merged.value];  // for UCB1
 
                         if (merged.value === 2048) {
                             won = true;
@@ -380,7 +401,7 @@ class Grid {
                 }
             }
         }
-        return { moved: moved, score: score, won: won };
+        return { moved, score, reward, won };
     }
 
     computerMove = () => {
